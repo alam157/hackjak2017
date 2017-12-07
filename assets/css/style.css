@@ -355,7 +355,7 @@ p {
 }
 .section .title > p {
     font-size: 20px;
-    color: #FFF;
+    color: #5A5652;
     font-weight: lighter;
 }
 .primary-section {
@@ -381,7 +381,7 @@ p {
     background-size: auto;
 }
 .bgdetail {
-    background: url("img/bgdetail.png") no-repeat center top;
+    background: url("img/bgdetail.jpg") no-repeat center top;
      background-repeat: no-repeat;
     -webkit-background-size: cover;
     background-size: cover;

@@ -29,8 +29,23 @@ h1 {
 		top: 60px;
 		background: #FFF;
 }
+.popupGraph {
+		position: absolute;
+		width: 930px;
+		height: auto;
+		left: 100%;
+		top: 340px;
+		background: #FFF;
+}
 
 #modal_trigger {
+		margin: 40px auto;
+		width: 200px;
+		display: block;
+		border: 1px solid #DDD;
+		border-radius: 4px;
+}
+#graph_trigger {
 		margin: 40px auto;
 		width: 200px;
 		display: block;
@@ -92,6 +107,16 @@ a.btn_red {
 }
 
 .popupHeader .modal_close {
+		position: absolute;
+		right: 0;
+		top: 0;
+		padding: 10px 15px;
+		background: #E4E4E2;
+		cursor: pointer;
+		color: #aaa;
+		font-size: 16px;
+}
+.popupHeader .graph_close {
 		position: absolute;
 		right: 0;
 		top: 0;

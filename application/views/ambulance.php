@@ -59,8 +59,8 @@
             <div class="navbar">
                 <div class="navbar-inner">
                     <div class="container">
-                        <a href="#" class="brand">
-                            <img src="<?= base_url() ?>assets/images/logo2.png" width="180" height="50" alt="Logo" />
+                        <a href="<?=base_url()?>" class="brand">
+                            <img src="<?= base_url() ?>assets/images/logo.png" width="180" height="50" alt="Logo" />
                             <!-- This is website logo -->
                         </a>
                         <!-- Navigation button, visible on small resolution -->
@@ -208,16 +208,18 @@
                         position: position,
                         map: map,
                         animation: google.maps.Animation.DROP,
-                        icon: '<?= base_url() ?>assets/images/puskesmas.png'
+                        icon: '<?= base_url() ?>assets/images/call.png'
                     });
 
                     var contentString = '<div id="content">' +
                             '<img src="<?= base_url() ?>assets/images/logo_puskesmas.png" class="logo">' +
-                            '<h4 id="firstHeading" class="firstHeading">' + data.nama + '</h4>' +
+                            '<h4 id="firstHeading" class="firstHeading">' + data.nama + '</h4>' + '<br>' +
                             '<div id="bodyContent">' +
-                            'Telepon : ' + data.telp + '<br>' +
+                            
+                            'Alamat : ' + data.alamat + '<br>' +
+                            'No. Telepon : ' + data.telp + '<br>' +
                             '</p>' +
-                            '<a href="tel:'+ data.telp +'" class="btn btn-success btn-sm float-right">Call</a>' +
+                            '<a href="tel:'+ data.telp +'"><img src="<?= base_url() ?>assets/images/ycall.png" width="30" height="20" alt="Logo" /></a>' +
                             '</div>' +
                             '</div>';
 

@@ -10,7 +10,7 @@
     <head>
         <meta charset=utf-8>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Pluton Theme by BraphBerry.com</title>
+        <title>#HACKJAK2017</title>
         <!-- Load Roboto font -->
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <!-- Load css styles -->
@@ -18,7 +18,9 @@
         <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/css/bootstrap-responsive.css" />
         <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/css/style.css" />
         <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/css/pluton.css" />
+        <link type="text/css" rel="stylesheet" href="<?= base_url() ?>assets/css/graph.css" />
         <link type="text/css" rel="stylesheet" href="<?= base_url() ?>assets/css/stylelogin.css" />
+        
         <!--[if IE 7]>
             <link rel="stylesheet" type="text/css" href="css/pluton-ie7.css" />
         <![endif]-->
@@ -46,8 +48,8 @@
         <div class="navbar">
             <div class="navbar-inner">
                 <div class="container">
-                    <a href="#" class="brand">
-                        <img src="<?=base_url()?>assets/images/logo2.png" width="180" height="50" alt="Logo" />
+                    <a href="<?=base_url()?>" class="brand">
+                        <img src="<?=base_url()?>assets/images/logo.png" width="180" height="50" alt="Logo" />
                         <!-- This is website logo -->
                     </a>
                     <!-- Navigation button, visible on small resolution -->
@@ -162,93 +164,39 @@
 		</section>
 	</div>
 </div>
-          <div class="container">
+        <div class="container">
 	<div id="graph" class="popupContainer" style="display:none;">
 		<header class="popupHeader">
-			<span class="header_title">Login</span>
+			<span class="header_title">GRAPH</span>
 			<span class="modal_close"><i class="fa fa-times"></i></span>
 		</header>
 		
 		<section class="popupBody">
-			<!-- Social Login -->
-			<div class="social_login">
-				<div class="">
-					<a href="#" class="social_box fb">
-						<span class="icon"><i class="fa fa-facebook"></i></span>
-						<span class="icon_title">Connect with Facebook</span>
-						
-					</a>
-
-					<a href="#" class="social_box google">
-						<span class="icon"><i class="fa fa-google-plus"></i></span>
-						<span class="icon_title">Connect with Google</span>
-					</a>
-				</div>
-
-				<div class="centeredText">
-					<span>Or use your Email address</span>
-				</div>
-
-				<div class="action_btns">
-					<div class="one_half"><a href="#" id="login_form" class="btn">Login</a></div>
-					<div class="one_half last"><a href="#" id="register_form" class="btn">Sign up</a></div>
-				</div>
-			</div>
-
-			<!-- Username & Password Login form -->
-			<div class="user_login">
-				<form>
-					<label>Email / Username</label>
-					<input type="text" />
-					<br />
-
-					<label>Password</label>
-					<input type="password" />
-					<br />
-
-					<div class="checkbox">
-						<input id="remember" type="checkbox" />
-						<label for="remember">Remember me on this computer</label>
-					</div>
-
-					<div class="action_btns">
-						<div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a></div>
-						<div class="one_half last"><a href="#" class="btn btn_red">Login</a></div>
-					</div>
-				</form>
-
-				<a href="#" class="forgot_password">Forgot password?</a>
-			</div>
-
-			<!-- Register Form -->
-			<div class="user_register">
+                    <div>
 				<form>
 					<label>Full Name</label>
-					<input type="text" />
-					<br />
+					
+<ul class="chart">
+  <li>
+    <span style="height:5%" title="ActionScript"></span>
+  </li>
+  <li>
+    <span style="height:70%" title="JavaScript"></span>
+  </li>
+  <li>
+    <span style="height:50%" title="CoffeScript"></span>
+  </li>
+  <li>
+    <span style="height:15%" title="HTML"></span>
+  </li>
+</ul>    
 
-					<label>Email Address</label>
-					<input type="email" />
-					<br />
-
-					<label>Password</label>
-					<input type="password" />
-					<br />
-
-					<div class="checkbox">
-						<input id="send_updates" type="checkbox" />
-						<label for="send_updates">Send me occasional email updates</label>
-					</div>
-
-					<div class="action_btns">
-						<div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a></div>
-						<div class="one_half last"><a href="#" class="btn btn_red">Register</a></div>
-					</div>
 				</form>
 			</div>
 		</section>
 	</div>
 </div>
+          
         <!-- Start home section -->
         <div id="home">
             <!-- Start cSlider -->
@@ -260,34 +208,35 @@
                 <div class="container">
                     <!-- Start first slide -->
                     <div class="da-slide">
-                        <h2 class="fittext2">Welcome to pluton theme</h2>
-                        <h4>Clean & responsive</h4>
-                        <p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane.</p>
-                        <a href="#" class="da-link button">Read more</a>
+                        <!--<div class="da-img"> <img src="<?=base_url()?>assets/images/16.jpg" alt="image01" width="320"></div>-->
+                        <h2 class="fittext2">AYO KE POSYANDU?????</h2>
+                        <h4>Punya Balita ditimbang di posyandu ya??</h4>
+                        <p>Anak sehat, tambah umur, tambah berat, tambah pandai. Dapatkan pelayanan Gizi dan Imunisasi Lengkap Di Posyandu .....</p>
+                        <a href="#" class="da-link button">Baca Selengkapnya</a>
                         <div class="da-img">
-                            <img src="<?=base_url()?>assets/images/Slider01.png" alt="image01" width="320">
+                            <img src="<?=base_url()?>assets/images/18.png" alt="image01" width="320">
                         </div>
                     </div>
                     <!-- End first slide -->
                     <!-- Start second slide -->
                     <div class="da-slide">
-                        <h2>Easy management</h2>
-                        <h4>Easy to use</h4>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                        <a href="#" class="da-link button">Read more</a>
+                        <h2>VAKSIN SERVIKS GRATIS !!!!</h2>
+                        <h4>Sudahkah anda melakukan vaksin ????</h4>
+                        <p>Segera Cegah Kanker Serviks dengan Vaksin, Vaksin Serviks Gratis hanya ada di Puskesmas.....</p>
+                        <a href="#" class="da-link button">Baca Selengkapnya</a>
                         <div class="da-img">
-                            <img src="<?=base_url()?>assets/images/Slider02.png" width="320" alt="image02">
+                            <img src="<?=base_url()?>assets/images/serviks.jpg" width="320" alt="image02">
                         </div>
                     </div>
                     <!-- End second slide -->
                     <!-- Start third slide -->
                     <div class="da-slide">
-                        <h2>Revolution</h2>
-                        <h4>Customizable</h4>
-                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-                        <a href="#" class="da-link button">Read more</a>
+                        <h2>ADA LAYANAN  KB GRATIS PADA HARI NASIONAL</h2>
+                        <h4>Sebelum anda Terlambat, rencanakan program KB anda !!</h4>
+                        <p>Yang hendak mendapatkan pelayanan KB secara Gratis, Baik Konsultasi maupun lainya hanya ada di wilayah ini saja ....</p>
+                        <a href="#" class="da-link button">Baca Selengkapnya</a>
                         <div class="da-img">
-                            <img src="<?=base_url()?>assets/images/Slider03.png" width="320" alt="image03">
+                            <img src="<?=base_url()?>assets/images/kb.png" width="320" alt="image03">
                         </div>
                     </div>
                     <!-- Start third slide -->
@@ -306,9 +255,9 @@
             <div class="container">
                 <!-- Start title section -->
                 <div class="title">
-                    <h1>What We Do?</h1>
+                    <h1>PELAYANAN</h1>
                     <!-- Section's title goes here -->
-                    <p>Duis mollis placerat quam, eget laoreet tellus tempor eu. Quisque dapibus in purus in dignissim.</p>
+                    <p>Terdapat 3 button pelayanan pada Icon Gambar di bawah ini, sesuaikan dengan kebutuhan anda</p>
                     <!--Simple description for section goes here. -->
                 </div>
                 <div class="row-fluid">
@@ -318,7 +267,7 @@
                                 <a href="<?=base_url()?>index.php/home/maps_terdekat">  <img class="img-circle" src="<?=base_url()?>assets/images/coba1.png" alt="service 1" ></a>
                             </div>
                             <h3>List RS & Puskesmas</h3>
-                            <p>We Create Modern And Clean Theme For Your Business Company.</p>
+                            <p>Dafar Rumah Sakit dan Puskesmas dapat dilihat di menu ini, lokasi, kamar tersedia,dll</p>
                         </div>
                     </div>
                     <div class="span4">
@@ -327,19 +276,20 @@
                                 <a href="<?=base_url()?>index.php/home/ambulance"> <img class="img-circle" src="<?=base_url()?>assets/images/ambulan.png" alt="service 2" /></a>
                             </div>
                             <h3>Ambulance</h3>
-                            <p>We Create Modern And Powerful Theme With Lots Animation And Features</p>
+                            <p>Anda Membutuhkan ambulance yang dekat dengan anda? segera hubungi</p>
                         </div>
                     </div>
                     <div class="span4">
                         <div class="centered service">
                             <div class="circle-border zoom-in">
-                                <div class="active"><a id="graph_trigger">
-                                <img class="img-circle" src="<?=base_url()?>assets/images/pie.png" alt="service 3">
-                                    </a></div>
+                                <div class="active">
+                                 <a id="graph_trigger" href="#graph">
+                                <img class="img-circle" src="<?=base_url()?>assets/images/dfbl.png" alt="service 3"></a>
+                                </div>
                                   <!--<div class="active"><a id="modal_trigger" href="#modal"></a></div>-->
                             </div>
-                            <h3>Graphic</h3>
-                            <p>We Create Modern And Powerful Html5 And CSS3 Code Easy For Read And Customize.</p>
+                            <h3>Ramah Difabel</h3>
+                            <p>Anda ingin tempat yang nyaman buat anda sendiri ? Segera temukan</p>
                         </div>
                     </div>
                 </div>
@@ -360,30 +310,30 @@
                             <div class="span5 contact-form centered">
                                 <h3>Kritik & Saran</h3>
                                 <div id="successSend" class="alert alert-success invisible">
-                                    <strong>Well done!</strong>Your message has been sent.</div>
+                                    <strong>Well done!</strong>Pesan Berhasil Dikirim.</div>
                                 <div id="errorSend" class="alert alert-error invisible">There was an error.</div>
                                 <form id="contact-form" action="php/mail.php">
                                     <div class="control-group">
                                         <div class="controls">
-                                            <input class="span12" type="text" id="name" name="name" placeholder="* Your name..." />
+                                            <input class="span12" type="text" id="name" name="name" placeholder="* Nama ..." />
                                             <div class="error left-align" id="err-name">Please enter name.</div>
                                         </div>
                                     </div>
                                     <div class="control-group">
                                         <div class="controls">
-                                            <input class="span12" type="email" name="email" id="email" placeholder="* Your email..." />
+                                            <input class="span12" type="email" name="email" id="email" placeholder="* Email..." />
                                             <div class="error left-align" id="err-email">Please enter valid email adress.</div>
                                         </div>
                                     </div>
                                     <div class="control-group">
                                         <div class="controls">
-                                            <textarea class="span12" name="comment" id="comment" placeholder="* Comments..."></textarea>
+                                            <textarea class="span12" name="comment" id="comment" placeholder="* Komentas..."></textarea>
                                             <div class="error left-align" id="err-comment">Please enter your comment.</div>
                                         </div>
                                     </div>
                                     <div class="control-group">
                                         <div class="controls">
-                                            <button id="send-mail" class="message-btn">Send message</button>
+                                            <button id="send-mail" class="message-btn">Kirim Pesan</button>
                                         </div>
                                     </div>
                                 </form>
@@ -401,8 +351,8 @@
             <div class="triangle"></div>
             <div class="container">
                 <div class="title">
-                    <h1>Contact US</h1>
-                    <p>Hubungi kami</p>
+                    <h1>Hubungi Kami</h1>
+                    <p>Jika ada masalah pada Web ini, segera laporkan pada kami di No. 031 - X1XXXX2</p>
                 </div>
                         <div class="row-fluid centered">
                         <ul class="social">
