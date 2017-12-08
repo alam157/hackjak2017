@@ -101,7 +101,27 @@
                 <div class="col-lg-12">
                     <form class="form-control">
                         <h2>Tambahkan Ruang Publik Ramah Difabel</h2>
-                        <input type="text" class="form-control" placeholder="Keterangan Lokasi">
+                        <div class="row">
+                            <div class="col-lg-1">
+                                <label>Kategori</label>
+                            </div>
+                            <select class="form-control col-lg-2">
+                                <option>Toilet</option>
+                                <option>Halte</option>
+                                <option>Stasiun</option>
+                            </select>
+                        </div>
+                        <br>
+                        
+                        <div class="row">
+                            <div class="col-lg-1">
+                                <label>Keterangan</label>
+                            </div>
+                            <div class="col-lg-2">
+                                <textarea placeholder="Keterangan Lokasi"></textarea>
+                            </div>
+                        </div>
+                        <br>
                         <div id="map"></div>
                         <br>
                         <input type="submit" value="Submit" class="btn btn-primary form-control" >
