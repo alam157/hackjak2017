@@ -16,4 +16,8 @@ class Admin extends CI_Controller{
     public function index() {
         $this->load->view('cms/set_ambulance');
     }
+    
+    public function add_kamar($param) {
+        
+    }
 }

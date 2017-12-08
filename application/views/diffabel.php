@@ -52,6 +52,15 @@
                 bottom: 0px;
                 right: 0px;
             }
+            #form{
+                position: absolute;
+                z-index: 300;
+                right: 20px;
+                top: 20px;
+            }
+            #modal{
+                z-index: 600;
+            }
         </style>
     </head>
     <body>
@@ -59,8 +68,8 @@
             <div class="navbar">
                 <div class="navbar-inner">
                     <div class="container">
-                        <a href="#" class="brand">
-                            <img src="<?= base_url() ?>assets/images/logo2.png" width="180" height="50" alt="Logo" />
+                        <a href="<?= base_url() ?>" class="brand">
+                            <img src="<?= base_url() ?>assets/images/logo.png" width="180" height="50" alt="Logo" />
                             <!-- This is website logo -->
                         </a>
                         <!-- Navigation button, visible on small resolution -->
@@ -72,7 +81,7 @@
                             <ul class="nav" id="top-navigation">
 
                                 <!--<li class="active"><a href="login.php">LOGIN</a></li>-->
-                                <li class="active"><a id="modal_trigger" href="#modal">LOGIN</a></li>
+                                <li class="active"><a href="#modal">LOGIN</a></li>
                                 <!--<li class="active"><a href="bgdetail.html">DETAIL</a></li>-->
                                 <!--<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>-->
 
@@ -87,6 +96,9 @@
                         <!-- End main navigation -->
                     </div>
                 </div>
+            </div>
+            <div id="form">
+                <a  class="btn btn-default" id="modal_trigger" href="<?= base_url() ?>index.php/home/add_difabel"><i class="fa fa-plus" aria-hidden="true"></i>Tambahkan</a>
             </div>
             <div id="map"></div>
         </div>
@@ -125,7 +137,7 @@
         <script async defer
                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgjv6izzqegCSWLWHw6DYZZEpzG_bST8E&callback=initMap">
         </script>
-        <script src="<?=base_url()?>assets/js/jquery.js"></script>
+        <script src="<?= base_url() ?>assets/js/jquery.js"></script>
         <script type="text/javascript" src="<?= base_url() ?>assets/js/jquery.mixitup.js"></script>
         <script type="text/javascript" src="<?= base_url() ?>assets/js/bootstrap.js"></script>
         <script type="text/javascript" src="<?= base_url() ?>assets/js/modernizr.custom.js"></script>
@@ -201,15 +213,37 @@
 //                        position: position,
 //                        map: map,
 //                        animation: google.maps.Animation.DROP,
-//                        icon: '<?php // base_url()       ?>assets/images/puskesmas.png'
+//                        icon: '<?php // base_url()                   ?>assets/images/puskesmas.png'
 //                    }));
 
-                    markers[i] = new google.maps.Marker({
-                        position: position,
-                        map: map,
-                        animation: google.maps.Animation.DROP,
-                        icon: '<?= base_url() ?>assets/images/puskesmas.png'
-                    });
+                    if (data.type == 'toilet') {
+                        markers[i] = new google.maps.Marker({
+                            position: position,
+                            map: map,
+                            animation: google.maps.Animation.DROP,
+                            icon: '<?= base_url() ?>assets/images/wc.png'
+                        });
+                    } else if (data.type == 'halte') {
+                        markers[i] = new google.maps.Marker({
+                            position: position,
+                            map: map,
+                            animation: google.maps.Animation.DROP,
+                            icon: '<?= base_url() ?>assets/images/bus.png'
+                        });
+                    } else if (data.type == 'stasiun') {
+                        markers[i] = new google.maps.Marker({
+                            position: position,
+                            map: map,
+                            animation: google.maps.Animation.DROP,
+                            icon: '<?= base_url() ?>assets/images/station.png'
+                        });
+                    } else {
+                        markers[i] = new google.maps.Marker({
+                            position: position,
+                            map: map,
+                            animation: google.maps.Animation.DROP
+                        });
+                    }
 
                     var contentString = '<div id="content">' +
                             '<div id="bodyContent">' +

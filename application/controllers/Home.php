@@ -51,5 +51,9 @@ class Home extends CI_Controller {
 
         $this->load->view('diffabel', $data);
     }
+    
+    public function add_difabel() {
+        $this->load->view('add_difabel');
+    }
 
 }

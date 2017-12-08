@@ -33,7 +33,7 @@
             body { height: 100%; margin: 0px; padding: 0px }
             #container { width: 100%; height: 100% }
             #map {
-                height: calc(100% - 86px);
+                height: 300px;
                 width: 100%;
             }
             #nav{
@@ -51,6 +51,15 @@
                 position: absolute;
                 bottom: 0px;
                 right: 0px;
+            }
+            #form{
+                position: absolute;
+                z-index: 300;
+                right: 20px;
+                top: 20px;
+            }
+            #modal{
+                z-index: 600;
             }
         </style>
     </head>
@@ -72,7 +81,7 @@
                             <ul class="nav" id="top-navigation">
 
                                 <!--<li class="active"><a href="login.php">LOGIN</a></li>-->
-                                <li class="active"><a id="modal_trigger" href="#modal">LOGIN</a></li>
+                                <li class="active"><a href="#modal">LOGIN</a></li>
                                 <!--<li class="active"><a href="bgdetail.html">DETAIL</a></li>-->
                                 <!--<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>-->
 
@@ -88,7 +97,17 @@
                     </div>
                 </div>
             </div>
-            <div id="map"></div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <form class="form-control">
+                        <h2>Tambahkan Ruang Publik Ramah Difabel</h2>
+                        <input type="text" class="form-control" placeholder="Keterangan Lokasi">
+                        <div id="map"></div>
+                        <br>
+                        <input type="submit" value="Submit" class="btn btn-primary form-control" >
+                    </form>
+                </div>
+            </div>
         </div>
         <script>
             var markers = [];
@@ -110,10 +129,17 @@
                     zIndex: 999,
                     map: map
                 });
+
+                var marker = new google.maps.Marker({
+                    map: map,
+                    draggable: true,
+                    title: "Drag me!"
+                });
                 if (navigator.geolocation) {
                     navigator.geolocation.getCurrentPosition(function (pos) {
                         var me = new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude);
                         myloc.setPosition(me);
+                        marker.setPosition(me);
                         map.setZoom(13);
                         map.setCenter(me);
                     }, function (error) {
@@ -174,89 +200,6 @@
             })
         </script>
         <script src="<?= base_url() ?>assets/js/bootstrap.min.js"></script>
-        <script>
-            var puskesmas = <?php echo json_encode($puskesmas); ?>;
-            var coordPuskesmas = [];
-            $.each(puskesmas, function (key, value) {
-                coordPuskesmas.push({lat: parseFloat(value.latitude), lng: parseFloat(value.longitude)});
-            });
 
-            function drop() {
-                clearMarkers();
-                for (var i = 0; i < coordPuskesmas.length; i++) {
-                    addMarkerWithTimeout(coordPuskesmas[i], i * 0, i, puskesmas[i]);
-                }
-            }
-
-            function clearMarkers() {
-                for (var i = 0; i < markers.length; i++) {
-                    markers[i].setMap(null);
-                }
-                markers = [];
-            }
-
-            function addMarkerWithTimeout(position, timeout, i, data) {
-                window.setTimeout(function () {
-//                    markers.push(new google.maps.Marker({
-//                        position: position,
-//                        map: map,
-//                        animation: google.maps.Animation.DROP,
-//                        icon: '<?php // base_url()           ?>assets/images/puskesmas.png'
-//                    }));
-                    var random = Math.floor(Math.random() * 10);
-                    if (random >= 5) {
-                        markers[i] = new google.maps.Marker({
-                            position: position,
-                            map: map,
-                            animation: google.maps.Animation.DROP,
-                            icon: '<?= base_url() ?>assets/images/rcal.png'
-                        });
-
-                        var contentString = '<div id="content">' +
-                                '<img src="<?= base_url() ?>assets/images/logo_puskesmas.png" class="logo">' +
-                                '<h4 id="firstHeading" class="firstHeading">' + data.nama + '</h4>' + '<br>' +
-                                '<div id="bodyContent">' +
-                                'Alamat : ' + data.alamat + '<br>' +
-                                'No. Telepon : ' + data.telp + '<br>' +
-                                'Status : Busy <br>' +
-                                '</p>' +
-                                '<img src="<?= base_url() ?>assets/images/yrecall.png" width="30" height="20" alt="Logo" />' +
-                                '</div>' +
-                                '</div>';
-                    } else {
-                        markers[i] = new google.maps.Marker({
-                            position: position,
-                            map: map,
-                            animation: google.maps.Animation.DROP,
-                            icon: '<?= base_url() ?>assets/images/call.png'
-                        });
-
-                        var contentString = '<div id="content">' +
-                                '<img src="<?= base_url() ?>assets/images/logo_puskesmas.png" class="logo">' +
-                                '<h4 id="firstHeading" class="firstHeading">' + data.nama + '</h4>' + '<br>' +
-                                '<div id="bodyContent">' +
-                                'Alamat : ' + data.alamat + '<br>' +
-                                'No. Telepon : ' + data.telp + '<br>' +
-                                'Status : Ready <br>' +
-                                '</p>' +
-                                '<a href="tel:' + data.telp + '"><img src="<?= base_url() ?>assets/images/ycall.png" width="30" height="20" alt="Logo" /></a>' +
-                                '</div>' +
-                                '</div>';
-                    }
-
-
-                    var infowindow = new google.maps.InfoWindow({
-                        content: contentString
-                    });
-                    markers[i].addListener('click', function () {
-                        infowindow.open(map, markers[i]);
-                    });
-                }, timeout);
-            }
-
-            $(document).ready(function () {
-                drop();
-            });
-        </script>
     </body>
 </html>

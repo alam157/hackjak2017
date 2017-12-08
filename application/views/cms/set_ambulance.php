@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>AdminLTE 2 | Dashboard</title>
+        <title>SIKES</title>
         <!-- Tell the browser to be responsive to screen width -->
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         <!-- Bootstrap 3.3.7 -->
@@ -27,6 +27,7 @@
         <link rel="stylesheet" href="<?= base_url() ?>assets/cms/bower_components/bootstrap-daterangepicker/daterangepicker.css">
         <!-- bootstrap wysihtml5 - text editor -->
         <link rel="stylesheet" href="<?= base_url() ?>assets/cms/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+        <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -140,6 +141,16 @@
                                 <i class="fa fa-ambulance"></i> <span>Ambulance</span>
                             </a>
                         </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-bed"></i> <span>Manage Kamar Inap</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-building"></i> <span>Profil RS / Puskesmas</span>
+                            </a>
+                        </li>
 
                     </ul>
                 </section>
@@ -170,41 +181,34 @@
                             <!-- quick email widget -->
                             <div class="box box-info">
                                 <div class="box-header">
-                                    <i class="fa fa-envelope"></i>
-
-                                    <h3 class="box-title">Quick Email</h3>
-                                    <!-- tools box -->
-                                    <div class="pull-right box-tools">
-                                        <button type="button" class="btn btn-info btn-sm" data-widget="remove" data-toggle="tooltip"
-                                                title="Remove">
-                                            <i class="fa fa-times"></i></button>
-                                    </div>
-                                    <!-- /. tools -->
+                                    <i class="fa fa-ambulance"></i>
+                                    <h3 class="box-title">Ambulance</h3>
                                 </div>
                                 <div class="box-body">
-                                    <form action="#" method="post">
-                                        <div class="form-group">
-                                            <input type="email" class="form-control" name="emailto" placeholder="Email to:">
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" name="subject" placeholder="Subject">
-                                        </div>
-                                        <div>
-                                            <textarea class="textarea" placeholder="Message"
-                                                      style="width: 100%; height: 125px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
-                                        </div>
-                                    </form>
+                                    <div class="col-lg-6">
+                                        <table class="table table-bordered">
+                                            <thead>
+                                            <th>Nopol Ambulance</th>
+                                            <th>Status</th>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>B 2132 WA</td>
+                                                    <td><input type="checkbox" data-toggle="toggle" data-on="Ready" data-off="Busy" checked></td>
+                                                </tr>
+                                            </tbody>
+                                        </table
+                                    </div>
                                 </div>
                                 <div class="box-footer clearfix">
-                                    <button type="button" class="pull-right btn btn-default" id="sendEmail">Send
-                                        <i class="fa fa-arrow-circle-right"></i></button>
+
                                 </div>
                             </div>
 
                         </section>
                         <!-- /.Left col -->
                         <!-- right col (We are only adding the ID to make the widgets sortable)-->
-                        
+
                         <!-- right col -->
                     </div>
                     <!-- /.row -->
@@ -243,6 +247,7 @@
         </script>
         <!-- Bootstrap 3.3.7 -->
         <script src="<?= base_url() ?>assets/cms/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
         <!-- Morris.js charts -->
         <script src="<?= base_url() ?>assets/cms/bower_components/raphael/raphael.min.js"></script>
         <script src="<?= base_url() ?>assets/cms/bower_components/morris.js/morris.min.js"></script>
